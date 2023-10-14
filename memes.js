@@ -6,21 +6,25 @@ var mc=0;
 
 function clog(p,m,c){console.log('%c'+p,'color: white; background: ' + c + '; padding: 2px 6px; border-radius: 3px; margin-right: 5px;',m);}
 
-if (!localStorage.getItem("username") === null) {
-  console.log('History found, importing...')
-  mhistory = localStorage.getItem("history");
-} else {
+if (localStorage.getItem("username") === null) {
   console.log('No meme history :(')
   mhistory = 'Meme history';
   localStorage.setItem("history", mhistory);
+  console.log('History found, importing...')
+  mhistory = localStorage.getItem("history");
+} else {
+  console.log('History found, importing...')
+  mhistory = localStorage.getItem("history");
 }
 
-if (!localStorage.getItem("memecount") === null) {
+if (localStorage.getItem("memecount") === null) {
+  console.log('No meme count :(')
+  mc=0;
   console.log('Meme count found, importing...')
   mc = localStorage.getItem("memecount");
 } else {
-  console.log('No meme count :(')
-  mc=0;
+  console.log('Meme count found, importing...')
+  mc = localStorage.getItem("memecount");
 }
 
 
