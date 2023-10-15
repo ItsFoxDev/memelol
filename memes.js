@@ -30,8 +30,8 @@ if (localStorage.getItem("memecount") === null) {
 
 
 function dtmt(){
-  /* Actually downloads meme, idk whats happening i used insomnia */
-  clog('Working','Fetching meme','darkgoldenrod');
+  /* Actually downloads meme, idk whats happening i used insomnia
+  clog('Working','Fetching meme','darkgoldenrod'); /**/
   const options = {method: 'GET', headers: {'User-Agent': 'insomnia/8.2.0'}};
   fetch('https://meme-api.com/gimme/1', options)
     .then(response => parsememe(response))
@@ -66,7 +66,7 @@ function final(t,u,p){
   /* Get image id (Image file name) */
   var id1 = u.split('/i.redd.it/')[1];
   var id = id1.split('/')[0];
-  clog('Found ID','Meme ID:'+id,'DarkMagenta');
+  /* clog('Found ID','Meme ID:'+id,'DarkMagenta'); */
 
   /* Check if meme viewed before */
   if (mhistory.includes(id)){
